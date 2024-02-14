@@ -2,13 +2,21 @@
 	"name": "ginko",
 	"description": "Language Support for Device Trees",
 	"author": "Lukas Scheller",
+	"publisher": "lscheller",
 	"license": "MIT",
 	"version": "0.0.1",
-	"publisher": "lscheller",
-	"categories": [],
-	"keywords": [
-		"dts"
+	"categories": [
+		"Programming Languages"
 	],
+	"keywords": [
+		"dts",
+		"device-tree",
+		"language-server"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Schottkyc137/ginko_vscode"
+	},
 	"engines": {
 		"vscode": "^1.75.0"
 	},
