@@ -30,7 +30,7 @@ const config = {
         extensions: ['.ts', '.js'],
     },
     optimization: {
-        minimize: false
+        minimize: true
     },
     module: {
         rules: [

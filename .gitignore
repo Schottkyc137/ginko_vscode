@@ -5,3 +5,4 @@ client/out
 server
 .vscode-test
 dist
+*.vsix

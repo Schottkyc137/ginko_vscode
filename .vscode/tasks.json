@@ -10,7 +10,8 @@
 				"reveal": "never"
 			},
 			"problemMatcher": [
-				"$tsc"
+				"$ts-webpack",
+				"$tslint-webpack"
 			]
 		},
 		{
@@ -26,7 +27,8 @@
 				"reveal": "never"
 			},
 			"problemMatcher": [
-				"$tsc-watch"
+				"$ts-webpack-watch",
+				"$tslint-webpack-watch"
 			]
 		}
 	]

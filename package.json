@@ -20,7 +20,7 @@
 	"engines": {
 		"vscode": "^1.75.0"
 	},
-	"main": "./client/out/extension",
+	"main": "./dist/extension",
 	"contributes": {
 		"languages": [
 			{
@@ -68,12 +68,10 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "webpack --mode production",
-		"compile": "cd client && tsc -b && cd ..",
-		"watch": "cd client && tsc -b -w  && cd ..",
+		"lint": "eslint ./client/src --ext .ts,.tsx",
 		"postinstall": "cd client && npm install && cd ..",
 		"webpack": "webpack --mode development",
-		"webpack-dev": "webpack --mode development --watch",
-		"test-compile": "tsc -p ./"
+		"webpack-dev": "webpack --mode development --watch"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
