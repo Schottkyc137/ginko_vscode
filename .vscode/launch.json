@@ -8,8 +8,7 @@
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}"],
 			"outFiles": [
-				"${workspaceRoot}/client/out/**/*.js",
-				"${workspaceRoot}/server/out/**/*.js"
+				"${workspaceFolder}/client/dist/**/*.js",
 			],
 			"autoAttachChildProcesses": true,
 			"preLaunchTask": {

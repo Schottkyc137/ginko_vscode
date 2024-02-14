@@ -44,7 +44,7 @@
 				"path": "./syntaxes/dts.tmLanguage.json"
 			}
 		],
-		"configuration":[
+		"configuration": [
 			{
 				"title": "ginko",
 				"type": "object",
@@ -60,34 +60,30 @@
 						"enumDescriptions": [
 							"Use language server embedded in extension.",
 							"Run ginko_ls from system path."
-						]	
+						]
 					}
 				}
 			}
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -b",
-		"watch": "tsc -b -w",
-		"lint": "eslint ./client/src --ext .ts,.tsx",
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "cd client && tsc -b && cd ..",
+		"watch": "cd client && tsc -b -w  && cd ..",
 		"postinstall": "cd client && npm install && cd ..",
-		"test": "sh ./scripts/e2e.sh"
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"test-compile": "tsc -p ./"
 	},
 	"devDependencies": {
-		"@types/fs-extra": "^11.0.4",
-		"@types/mocha": "^10.0.6",
-		"@types/node": "^18.14.6",
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
 		"@typescript-eslint/parser": "^6.14.0",
+		"esbuild": "^0.20.0",
 		"eslint": "^8.56.0",
 		"mocha": "^10.2.0",
-		"typescript": "^5.3.3"
-	},
-	"dependencies": {
-		"@types/node-fetch": "^2.6.11",
-		"extract-zip": "^2.0.1",
-		"fs-extra": "^11.2.0",
-		"octokit": "^3.1.2"
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.3.3",
+		"webpack": "^5.90.1",
+		"webpack-cli": "^5.1.4"
 	}
 }
